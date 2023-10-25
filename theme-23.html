@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme 23</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        .checklist-ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .checklist-ul li {
+            padding: 0 0 0 25px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+        
+        .checklist-ul li:before {
+            position: absolute;
+            left: 5px;
+            content: "✓";
+            color: #666;
+        }
+
+        .faq .faq-list {
+            padding: 0;
+            list-style: none;
+        }
+        
+        .faq .faq-list li {
+            background-color: #ffee5a;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            padding: 10px 40px;
+        }
+        
+        .faq .faq-list a {
+            display: block;
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333333;
+            text-decoration: none;
+        }
+        
+        .faq .faq-list i {
+            font-size: 16px;
+            position: absolute;
+            left: -25px;
+            top: 6px;
+            transition: 1s;
+        }
+        
+        .faq-title {
+            text-align: center;
+            font-size: 17px;
+            border-bottom: 2px dashed #ffffff;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            color: #ffffff;
+        }
+        
+        .faq .faq-list p {
+            padding-top: 5px;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .collapsed i.fas.fa-arrow-up {
+            transform: rotate(180deg);
+        }
+        
+        .hero-header {
+            background-color: #003177;
+            padding: 20px 0px 20px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 mx-auto">
+                    <div class="py-4">
+                        <img src="./placeholder/200x200.png" width="400" height="400" class="img-fluid" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark">
+        <div class="row">
+            <div class="container">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 py-4">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 py-5">
+                            <h1 class="text-warning font-weight-bold">Wangi Parfum Yang Bikin Kangen Mekah Dan Madinah
+                            </h1>
+                            <p class="h5 text-white">Aromanya Mengingatkan Kita Tentang Suasana Masjidil Haram, Masjid Nabawi Dan Membuat Kita Kian Rindu Terhadap Baitullah</p>
+                            <div class="py-4">
+                                <a href="javascript:void(0)" class="js-lp-checkout btn btn-warning font-weight-bold">PESAN DISINI</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="py-2 text-center">
+                                <img src="./placeholder/300x500.png" width="300" height="500" class="img-fluid" />
+                            </div>
+                            <div class="py-4 text-center">
+                                <a href="javascript:void(0)" class="js-lp-checkout btn btn-warning font-weight-bold">PESAN DISINI</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h1 class="text-warning">"PARFUM KISWAH DAN RAUDHAH"</h1>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 p-3">
+                    <div class="text-center">
+                        <div class="card bg-warning">
+                            <div class="p-5">
+                                <img src="./placeholder/200x200.png" alt="sepatu-boots " class="rounded-circle w-100 img-fluid " />
+                            </div>
+                            <div class="card-body ">
+                                <h3 class="card-title font-weight-bold ">RAUDHAH</h3>
+                                <p class="card-text ">Raudhah merupakan sebuah tempat mustajab untuk berdo’a di dalam Masjid Nabawi Madinah, dengan wangi yang khas, membuat waktu berdo’a jadi lebih bermakna.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 col-md-6 col-sm-12 p-3">
+                    <div class="text-center">
+                        <div class="card bg-warning">
+                            <div class="p-5">
+                                <img src="./placeholder/200x200.png" alt="sepatu-boots " class="rounded-circle w-100 img-fluid " />
+                            </div>
+                            <div class="card-body ">
+                                <h3 class="card-title font-weight-bold ">KISWAH</h3>
+                                <p class="card-text ">Kiswah merupakan kain yang digunakan untuk melindungi Ka’bah. Wangi khas Kiswah, membuat kita selalu rindu untuk beribadah langsung di Mekkah.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark py-4">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="text-warning">"Mengapa Saya Harus Pilih Parfum Dari Elthoyyib & Al-Muslimu Parfume ?"</h1>
+            </div>
+            <div class="row py-4">
+
+
+                <div class="col-lg-3 col-md-3 col-sm-12 p-1">
+                    <div class="text-center">
+                        <div class="card bg-warning">
+                            <div class="p-4">
+                                <img src="./placeholder/200x200.png" alt="sepatu-boots " class="rounded-circle w-100 img-fluid " />
+                            </div>
+                            <div class="card-body ">
+                                <h3 class="card-title font-weight-bold ">Text Title</h3>
+                                <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut voluptatibus temporibus dicta deserunt libero.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 p-1">
+                    <div class="text-center">
+                        <div class="card bg-warning">
+                            <div class="p-4">
+                                <img src="./placeholder/200x200.png" alt="sepatu-boots " class="rounded-circle w-100 img-fluid " />
+                            </div>
+                            <div class="card-body ">
+                                <h3 class="card-title font-weight-bold ">Text Title</h3>
+                                <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut voluptatibus temporibus dicta deserunt libero.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 p-1">
+                    <div class="text-center">
+                        <div class="card bg-warning">
+                            <div class="p-4">
+                                <img src="./placeholder/200x200.png" alt="sepatu-boots " class="rounded-circle w-100 img-fluid " />
+                            </div>
+                            <div class="card-body ">
+                                <h3 class="card-title font-weight-bold ">Text Title</h3>
+                                <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut voluptatibus temporibus dicta deserunt libero.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 p-1">
+                    <div class="text-center">
+                        <div class="card bg-warning">
+                            <div class="p-4">
+                                <img src="./placeholder/200x200.png" alt="sepatu-boots " class="rounded-circle w-100 img-fluid " />
+                            </div>
+                            <div class="card-body ">
+                                <h3 class="card-title font-weight-bold ">Text Title</h3>
+                                <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut voluptatibus temporibus dicta deserunt libero.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 p-1">
+                    <div class="text-center">
+                        <div class="card bg-warning">
+                            <div class="p-4">
+                                <img src="./placeholder/200x200.png" alt="sepatu-boots " class="rounded-circle w-100 img-fluid " />
+                            </div>
+                            <div class="card-body ">
+                                <h3 class="card-title font-weight-bold ">Text Title</h3>
+                                <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut voluptatibus temporibus dicta deserunt libero.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 p-1">
+                    <div class="text-center">
+                        <div class="card bg-warning">
+                            <div class="p-4">
+                                <img src="./placeholder/200x200.png" alt="sepatu-boots " class="rounded-circle w-100 img-fluid " />
+                            </div>
+                            <div class="card-body ">
+                                <h3 class="card-title font-weight-bold ">Text Title</h3>
+                                <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut voluptatibus temporibus dicta deserunt libero.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 p-1">
+                    <div class="text-center">
+                        <div class="card bg-warning">
+                            <div class="p-4">
+                                <img src="./placeholder/200x200.png" alt="sepatu-boots " class="rounded-circle w-100 img-fluid " />
+                            </div>
+                            <div class="card-body ">
+                                <h3 class="card-title font-weight-bold ">Text Title</h3>
+                                <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut voluptatibus temporibus dicta deserunt libero.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 p-1">
+                    <div class="text-center">
+                        <div class="card bg-warning">
+                            <div class="p-4">
+                                <img src="./placeholder/200x200.png" alt="sepatu-boots " class="rounded-circle w-100 img-fluid " />
+                            </div>
+                            <div class="card-body ">
+                                <h3 class="card-title font-weight-bold ">Text Title</h3>
+                                <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut voluptatibus temporibus dicta deserunt libero.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h1 class="text-warning">"Kata Mereka Tentang Parfum Kiswah & Raudhah Dari Elthoyyib & Al-Muslimu Parfume"</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="text-center py-4">
+                        <h1 class="text-warning">Paket Premium Untuk Teman Setia Ibadahmu</h1>
+                        <p class="text-white h5">Tunggu Apalagi, Yuk Segera <b>Amankan Promo Dan Bonusnya</b></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 pt-3">
+                    <div class="card bg-warning">
+                        <img src="./placeholder/200x200.png" alt="sepatu-boots " class=" w-100 img-fluid " />
+                        <div class="card-body ">
+                            <h2 class="card-title font-weight-bold text-center"><del>IDR 95.000</del></h2>
+                            <h2 class="card-title font-weight-bold text-center">IDR 65.000</h2>
+                            <div class="py-4">
+                                <h4 class="text-center">Text Title</h4>
+                                <div class="py-2">
+                                    <hr class="divider p-1 bg-dark w-50">
+                                </div>
+                                <ul>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <a href="javascript:void(0)" class="js-lp-checkout btn btn-danger">
+                                    <h3>BELI SEKARANG</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 pt-3">
+                    <div class="card bg-warning">
+                        <img src="./placeholder/200x200.png" alt="sepatu-boots " class=" w-100 img-fluid " />
+                        <div class="card-body ">
+                            <h2 class="card-title font-weight-bold text-center"><del>IDR 95.000</del></h2>
+                            <h2 class="card-title font-weight-bold text-center">IDR 65.000</h2>
+                            <div class="py-4">
+                                <h4 class="text-center">Text Title</h4>
+                                <div class="py-2">
+                                    <hr class="divider p-1 bg-dark w-50">
+                                </div>
+                                <ul>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <a href="javascript:void(0)" class="js-lp-checkout btn btn-danger">
+                                    <h3>BELI SEKARANG</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 pt-3">
+                    <div class="card bg-warning">
+                        <img src="./placeholder/200x200.png" alt="sepatu-boots " class=" w-100 img-fluid " />
+                        <div class="card-body ">
+                            <h2 class="card-title font-weight-bold text-center"><del>IDR 95.000</del></h2>
+                            <h2 class="card-title font-weight-bold text-center">IDR 65.000</h2>
+                            <div class="py-4">
+                                <h4 class="text-center">Text Title</h4>
+                                <div class="py-2">
+                                    <hr class="divider p-1 bg-dark w-50">
+                                </div>
+                                <ul>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <a href="javascript:void(0)" class="js-lp-checkout btn btn-danger">
+                                    <h3>BELI SEKARANG</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="text-center py-4">
+                        <h1 class="text-warning">Paket Hemat Untuk Teman Setia Ibadahmu</h1>
+                        <p class="text-white h5">Tunggu Apalagi, Yuk Segera <b>Amankan Promo Dan Bonusnya</b></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 pt-3">
+                    <div class="card bg-warning">
+                        <img src="./placeholder/200x200.png" alt="sepatu-boots " class=" w-100 img-fluid " />
+                        <div class="card-body ">
+                            <h2 class="card-title font-weight-bold text-center"><del>IDR 95.000</del></h2>
+                            <h2 class="card-title font-weight-bold text-center">IDR 65.000</h2>
+                            <div class="py-4">
+                                <h4 class="text-center">Text Title</h4>
+                                <div class="py-2">
+                                    <hr class="divider p-1 bg-dark w-50">
+                                </div>
+                                <ul>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <a href="javascript:void(0)" class="js-lp-checkout btn btn-danger">
+                                    <h3>BELI SEKARANG</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 pt-3">
+                    <div class="card bg-warning">
+                        <img src="./placeholder/200x200.png" alt="sepatu-boots " class=" w-100 img-fluid " />
+                        <div class="card-body ">
+                            <h2 class="card-title font-weight-bold text-center"><del>IDR 95.000</del></h2>
+                            <h2 class="card-title font-weight-bold text-center">IDR 65.000</h2>
+                            <div class="py-4">
+                                <h4 class="text-center">Text Title</h4>
+                                <div class="py-2">
+                                    <hr class="divider p-1 bg-dark w-50">
+                                </div>
+                                <ul>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <a href="javascript:void(0)" class="js-lp-checkout btn btn-danger">
+                                    <h3>BELI SEKARANG</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 pt-3">
+                    <div class="card bg-warning">
+                        <img src="./placeholder/200x200.png" alt="sepatu-boots " class=" w-100 img-fluid " />
+                        <div class="card-body ">
+                            <h2 class="card-title font-weight-bold text-center"><del>IDR 95.000</del></h2>
+                            <h2 class="card-title font-weight-bold text-center">IDR 65.000</h2>
+                            <div class="py-4">
+                                <h4 class="text-center">Text Title</h4>
+                                <div class="py-2">
+                                    <hr class="divider p-1 bg-dark w-50">
+                                </div>
+                                <ul>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                    <li>Text Description</li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <a href="javascript:void(0)" class="js-lp-checkout btn btn-danger">
+                                    <h3>BELI SEKARANG</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="text-center bg-danger ">
+                        <h1 class="text-white p-3">Tentang Parfum Haramain</h1>
+                    </div>
+                    <h4>Parfum Haramain Merupakan Produk Resmi Dari Almuslimu Parfum. Yang Telah Memiliki Izin Edar Resmi Dengan Nomor Registrasi POM NA 18210602480 & NA 18210602481. Jadi Anda Tidak Perlu Kawatir Lagi Menggunakan Produk Ini.</h4>
+                    <div class="py-2 text-center ">
+                        <img src="./placeholder/1000x1000.png " width="1000 " height="1000 " class="img-fluid " />
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="page_form_section ">
+        <div class="page_form "></div>
+    </section>
+
+    <section class="faq bg-dark py-4">
+        <div class="container">
+            <div class="faq-title">
+                <h2>Hal Yang Sering Ditanyakan</h2>
+            </div>
+            <ul class="faq-list">
+                <li data-aos="fade-up" data-aos-delay="100" class="aos-init aos-animate">
+                    <a data-toggle="collapse" class="collapsed" href="#faq1" aria-expanded="false">Non consectetur a erat nam at lectus urna duis? <i class="fas fa-arrow-up"></i></a>
+                    <div id="faq1" class="collapse" data-parent=".faq-list" style="">
+                        <p>
+                            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                        </p>
+                    </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
+                    <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="fas fa-arrow-up"></i></a>
+                    <div id="faq2" class="collapse" data-parent=".faq-list">
+                        <p>
+                            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
+                            cursus turpis massa tincidunt dui.
+                        </p>
+                    </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="300" class="aos-init aos-animate">
+                    <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="fas fa-arrow-up"></i></a>
+                    <div id="faq3" class="collapse" data-parent=".faq-list">
+                        <p>
+                            Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna
+                            molestie at elementum eu facilisis sed odio morbi quis
+                        </p>
+                    </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="400" class="aos-init aos-animate">
+                    <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="fas fa-arrow-up"></i></a>
+                    <div id="faq4" class="collapse" data-parent=".faq-list">
+                        <p>
+                            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
+                            cursus turpis massa tincidunt dui.
+                        </p>
+                    </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="500" class="aos-init aos-animate">
+                    <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="fas fa-arrow-up"></i></a>
+                    <div id="faq5" class="collapse" data-parent=".faq-list">
+                        <p>
+                            Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                        </p>
+                    </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="600" class="aos-init aos-animate">
+                    <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="fas fa-arrow-up"></i></a>
+                    <div id="faq6" class="collapse" data-parent=".faq-list">
+                        <p>
+                            Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque
+                            diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="container py-4">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="text-center bg-danger ">
+                    <h1 class="text-white p-3">Kontak Resmi Kami</h1>
+                </div>
+                <div class="py-4 text-center text-lg-center ">
+                    <h4 class="font-weight-bold text-dark ">BALEOMOL INDONESIA</h6>
+                        <h6 class="text-dark font-weight-bold ">UMBUL SENJOYO, TINGKIR B03, KAB SEMARANG, JAWA TENGAH</p>
+                            <h6 class="text-dark font-weight-bold ">WA : 081525778174</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+
+</html>

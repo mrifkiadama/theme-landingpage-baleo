@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Theme 25</title>
+ <link rel="stylesheet" href="./css/style.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <style>
+  section {
+   background-color: #000;
+  }
+
+  .img-gallery img {
+   cursor: pointer;
+   border-radius: 0.25em;
+  }
+
+  .img-gallery img:hover {
+   opacity: 0.7;
+   transition: opacity 0.3s ease-out;
+  }
+
+  .modal img:hover {
+   opacity: 1;
+  }
+
+  .desc,
+  #caption {
+   text-align: center;
+   font-family: sans-serif;
+  }
+
+  .modal {
+   margin-top: 40px;
+   display: none;
+   position: flex;
+   z-index: 1;
+   padding-top: 5em;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgb(0, 0, 0);
+   /* Fallback color */
+   background-color: rgba(0, 0, 0, 0.8);
+   /* Black w/ opacity */
+  }
+
+  .modal-content {
+   margin: auto;
+   display: block;
+   width: 50%;
+   max-width: 600px;
+  }
+
+  #caption {
+   margin: auto;
+   display: block;
+   width: 80%;
+   max-width: 700px;
+   text-align: center;
+   color: rgb(255, 0, 0);
+   padding: 10px 0;
+   height: 150px;
+  }
+
+  .modal-content,
+  #caption {
+   -webkit-animation-name: zoom;
+   -webkit-animation-duration: 0.6s;
+   animation-name: zoom;
+   animation-duration: 0.6s;
+  }
+
+  @-webkit-keyframes zoom {
+   from {
+    transform: scale(0);
+   }
+
+   to {
+    transform: scale(1);
+   }
+  }
+
+  @keyframes zoom {
+   from {
+    transform: scale(0.1);
+   }
+
+   to {
+    transform: scale(1);
+   }
+  }
+
+  .close {
+   position: absolute;
+   top: 15px;
+   right: 35px;
+   color: #f1f1f1;
+   font-size: 40px;
+   font-weight: bold;
+   transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+   color: #bbb;
+   text-decoration: none;
+   cursor: pointer;
+  }
+
+  .containerslide {
+   height: 60vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   position: relative;
+  }
+
+  .slider-wrapper {
+   width: 300px;
+   height: 450px;
+   background: #000;
+   overflow: hidden;
+  }
+
+  .inner-wrapper {
+   width: 500%;
+   height: 100%;
+   position: relative;
+  }
+
+  .slide {
+   width: calc(100% / 5);
+   height: 100%;
+   background: rgb(0, 0, 0);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 100px;
+   font-weight: 700;
+   float: left;
+  }
+
+  .buttonslide {
+   width: 30px;
+   height: 30px;
+   border-top: 2px solid white;
+   position: absolute;
+   cursor: pointer;
+  }
+
+  .prev {
+   border-left: 2px solid white;
+   left: 15%;
+   transform: rotate(-45deg);
+  }
+
+  .next {
+   border-right: 2px solid white;
+   right: 15%;
+   transform: rotate(45deg);
+  }
+
+  @media screen and (min-width: 800px) {
+   .prev {
+    border-left: 2px solid white;
+    left: 30%;
+    transform: rotate(-45deg);
+   }
+
+   .next {
+    border-right: 2px solid white;
+    right: 30%;
+    transform: rotate(45deg);
+   }
+  }
+ </style>
+</head>
+
+<body>
+ <nav class="navbar sticky-top navbar-dark bg-dark">
+  <div class="container-fluid justify-content-center">
+   <img width="100px" src="./placeholder/250x100.png" class="img-fluid" alt="" />
+  </div>
+ </nav>
+ <section style="background-color: #000000">
+  <div class="container">
+   <div class="row text-center">
+    <div class="col-lg-12 col-md-12 col-xs-6 p-2 my-auto">
+     <div class="align-middle justify-content-center align-items-center">
+      <div class="py-2">
+       <img width="500px" class="img-fluid" src="./placeholder/500x500.png" alt="" />
+      </div>
+      <div class="display-4 font-weight-bold text-white">
+       Push Rank Sepuasnya!
+      </div>
+      <div class="h2 font-weight-bold default-text-3 mt-4">
+       Sering Kalah Nge-Game gara-gara mata Perih?
+      </div>
+      <div class="py-4 d-flex justify-content-center">
+       <div class="w-100">
+        <h5 class="font-weight-bold text-white">
+         Kacamata Gamer with Anti-Blue Lens dijamin Gak Bikin Mata
+         Perih saat nge-game, Ngoding, nonton, & kerja depan Gadget
+         Seharian!
+        </h5>
+       </div>
+      </div>
+      <div class="mt-4">
+       <img width="500px" class="img-fluid" src="./placeholder/500x500.png" alt="" />
+      </div>
+      <div class="py-4 d-flex justify-content-center">
+       <div class="w-100">
+        <h6 class="font-weight-bold mt-4 text-white">
+         Sekarang udah ada Kacamata Gaming Seenergy yang bisa bikin
+         Lo Push Rank Sepuasnya gak Takut lagi Mata Perih atau
+         Pusing.
+        </h6>
+       </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+       <div class="col-lg-8 col-md-8 col-sm-6 py-4 text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+         <iframe allowfullscreen="" width="560 " height="315 " src="https://www.youtube.com/embed/ohoILy23jq8?"
+          title="YouTube video player " frameborder="0 "
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "></iframe>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+ <div class="text-center bg-primary">
+  <div class="container">
+   <div class="font-weight-bold p-3 m-0 h3 text-white">
+    Best Gaming Experience!
+   </div>
+  </div>
+ </div>
+ <section id="is4aa" style="background-color: black;" class="mt-n4">
+  <div id="ilodk" class="container">
+   <div id="itvzj" class="col-lg-12 col-md-12 col-xs-6 my-auto text-center">
+    <div class="mt-4">
+     <img width="500px" class="img-fluid mt-4" src="./placeholder/500x500.png" alt="" />
+    </div>
+    <div class="h2 font-weight-bold default-text-3 mt-4">
+     Lensa AntiBlue Tech
+    </div>
+    <div class="py-4 d-flex justify-content-center">
+     <div class="w-100">
+      <h6 class="font-weight-bold text-white">
+       Lensa proteksi sinar biru bikin mata adem, gak bikin perih dan pusing walau lama depan gadget
+      </h6>
+     </div>
+    </div>
+    <div class="py-4 mt-2">
+     <img width="500px" class="img-fluid" src="./placeholder/500x500.png" alt="" />
+    </div>
+    <div class="h2 font-weight-bold default-text-3 mt-4">
+     Hyper Multi-Coat
+    </div>
+    <div class="py-4 d-flex justify-content-center">
+     <div class="w-100">
+      <h6 class="font-weight-bold text-white">
+       Lensa lebih jernih tahan debu, air, dan minyak, serta Hard-Coat tahan Gores. Bebas risih ngebersihin lensa
+       saat ngegame
+      </h6>
+     </div>
+    </div>
+    <div class="mt-2">
+     <img width="500px" class="img-fluid" src="./placeholder/500x500.png" alt="" />
+    </div>
+    <div class="h2 font-weight-bold default-text-3 mt-4">
+     Premium ThermoPlast
+    </div>
+    <div class="py-4 d-flex justify-content-center">
+     <div class="w-100">
+      <h6 class="font-weight-bold text-white">
+       Bahan lentur, ringan tapi kuat dan anti alergi, bikin tetep nyaman dipake seharian
+      </h6>
+     </div>
+    </div>
+    <div class="mt-2">
+     <img width="500px" class="img-fluid" src="./placeholder/500x500.png" alt="" />
+    </div>
+    <div class="h2 font-weight-bold default-text-3 mt-4">
+     Earlock For Pro Gamer
+    </div>
+    <div class="py-4 d-flex justify-content-center">
+     <div class="w-100">
+      <h6 class="font-weight-bold text-white">
+       Pengunci telinga biar bisa bebas bergerak, tanpa takut kacamata jatuh
+      </h6>
+     </div>
+    </div>
+ </section>
+ <div class="text-center bg-primary">
+  <div class="container">
+   <div class="font-weight-bold p-3 m-0 h3 text-white">
+    Desain Khusus Gamer!</br>
+    <span class="h4">Gallery Frame Seenergy</span>
+   </div>
+  </div>
+ </div>
+ <section class="section-padding-20" style="background-color: #000000;">
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 mx-auto">
+     <div class="row mt-4 mb-4" id="imgmod">
+      <div class="col-lg-6 col-md-6 col-sm-12 py-2">
+       <div class="img-gallery">
+        <div class="text-center">
+         <img src="./placeholder/500x500.png" width="300" height="300" id="ihdcih" class="img-fluid" />
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 py-2">
+       <div class="img-gallery">
+        <div class="text-center">
+         <img src="./placeholder/500x500.png" width="300" height="300" id="ihdcih" class="img-fluid" />
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 py-2">
+       <div class="img-gallery">
+        <div class="text-center">
+         <img src="./placeholder/500x500.png" width="300" height="300" id="ihdcih" class="img-fluid" />
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 py-2">
+       <div class="img-gallery">
+        <div class="text-center">
+         <img src="./placeholder/500x500.png" width="300" height="300" id="ihdcih" class="img-fluid" />
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 py-2">
+       <div class="img-gallery">
+        <div class="text-center">
+         <img src="./placeholder/500x500.png" width="300" height="300" id="ihdcih" class="img-fluid" />
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 py-2">
+       <div class="img-gallery">
+        <div class="text-center">
+         <img src="./placeholder/500x500.png" width="300" height="300" id="ihdcih" class="img-fluid" />
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  </div>
+  <div class="mt-4 mb-4"
+   style="height:10px;z-index:1;width:100%;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='10'><path d='M0,10 L40,10 L50,0 L10,0 L0,10' fill='rgb(66,66,66)'/><path d='M50,10 L70,10 L80,0 L60,0 L50,10' fill='rgb(33,150,243)'/></svg>&quot;);background-repeat:repeat-x">
+  </div>
+  <div class="container">
+   <div id="iakx42" class="text-center h2 font-weight-bold p-3 m-0 text-white">
+    Gamer <span class="text-primary">Testimoni</span>
+   </div>
+   <div class="text-center">
+    <div class="py-2">
+     <div id="itzvax" class="row mt-4 p-3">
+      <div id="ge2mk" class="swiper-container">
+       <div class="swiper-wrapper">
+        <div id="ivg0f" class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-1" border="0"
+          id="im1mz" /></div>
+        <div id="innh0f" class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-2" border="0"
+          id="i7a2q" /></div>
+        <div id="idgg6" class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-3" border="0"
+          id="iem1r" /></div>
+        <div class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-4" border="0" id="iwer3" /></div>
+        <div class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-5" border="0" id="i6vop" /></div>
+        <div class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-6" border="0" id="is2qq" /></div>
+       </div>
+       <div class="swiper-button-prev"></div>
+       <div class="swiper-button-next"></div>
+       <div class="swiper-pagination"></div>
+       <div></div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+ <div class="text-center bg-primary">
+  <div class="container">
+   <div class="font-weight-bold p-3 m-0 h3 text-white">
+    BEST DEALS!
+   </div>
+  </div>
+ </div>
+ <section class="section-padding-20" style="background-color: black">
+  <div class="container">
+   <div class="text-center">
+    <div class="py-2">
+     <div class="mt-4">
+      <img height="500px" class="img-fluid" src="./placeholder/500x500.png" />
+     </div>
+     <div class="mt-2">
+      <div id="itzvax" class="row mt-4 p-3">
+       <div id="ii32mk" class="swiper-container">
+        <div class="swiper-wrapper">
+         <div id="ivg0f" class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-1" border="0"
+           id="im1mz" /></div>
+         <div id="innh0f" class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-2" border="0"
+           id="i7a2q" /></div>
+         <div id="idgg6" class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-3" border="0"
+           id="iem1r" /></div>
+         <div class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-4" border="0" id="iwer3" /></div>
+         <div class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-5" border="0" id="i6vop" /></div>
+         <div class="swiper-slide"><img src="./placeholder/500x500.png" alt="banner-6" border="0" id="is2qq" /></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+        <div></div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="py-2">
+     <div class="text-center">
+      <div class="font-weight-bold h4 text-white text-lg-center pt-5">SEGERA MILIKI KACAMATA</div>
+      <div class="font-weight-bold h4 text-white text-lg-center">GAMING DENGAN HARGA SPESIAL !!!</div>
+      <div class="font-weight-bold h5 text-white py-2">HARGA PROMO</div>
+      <div class="font-weight-bold h1 default-text-2">Rp. 198.000</div>
+      <div class="font-weight-bold h5 text-white py-2">HARGA NORMAL</div>
+      <div class="font-weight-bold h3 default-text-2"><del>Rp. 300.000</del></div>
+      <div class="font-weight-bold h6 text-white py-2">PEMBAYARAN BISA COD BAYAR DITEMPAT</div>
+      <div class="py-2"><a href="# " class="js-lp-checkout"><img src="./images/button-checkout.gif" id="checkout "
+         alt="checkout-button " class="img-fluid" /></a></div>
+     </div>
+     <div class="h2 font-weight-bold default-text-3 mt-4">
+      Saatnya Upgrade Equipment
+     </div>
+     <div class="d-flex justify-content-center">
+      <div class="w-50">
+       <h6 class="font-weight-bold text-white">
+        klaim POTONGAN HARGA sekarang
+        </br>
+        ( Harga bisa berubah kapan aja. Jangan nyesel kalo harga udah naik )
+       </h6>
+       <h2 id="cd">00:00:00</h2>
+      </div>
+     </div>
+     <section class="page_form_section">
+      <div class="page_form"></div>
+     </section>
+    </div>
+   </div>
+ </section>
+
+ <section class="section-padding-20" style="background-color: black;">
+  <div class="container">
+   <div class="text-center">
+    <div class="py-2"><img src="./images/pembayaran-1.png" alt="transsaksi-pembayaran " class="img-fluid" />
+    </div>
+   </div>
+   <div class="py-2">
+    <div class="font-weight-bold py-2 h5 text-center text-white">KEUNTUNGAN BELANJA DI TEMPAT KAMI</div>
+    <ol type="1 " class="container text-white">
+     <li>Semua produk bergaransi</li>
+     <li>Barang ekslusif hanya dijual online, jadi tidak akan ditemukan ditempat lain</li>
+     <li>Jaminan real picture Produk Sesuai FOTO</li>
+     <li>Barang berkualitas dan harga bersahabat</li>
+     <li>Jaminan kualitas karena hanya menjual produk Original</li>
+     <li>Pengiriman setiap hari kecuali hari libur & tanggal merah</li>
+     <li>Bisa Bayar ditempat (COD)</li>
+     <li>Melayani pengiriman melalui EXPEDISI TERPERCAYA JNE</li>
+    </ol>
+   </div>
+  </div>
+ </section>
+
+ <section style="background-color: black;">
+  <footer class="container py-2">
+   <div class="font-weight-bold h4 default-text-4 p-2 text-center bg-primary">
+    KONTAK
+   </div>
+   <div class="py-4 text-center text-lg-left">
+    <h6 class="font-weight-bold text-white">BALEOMOL INDONESIA</h6>
+    <p class="text-white">
+     UMBUL SENJOYO, TINGKIR B03, KAB SEMARANG, JAWA TENGAH
+    </p>
+    <p class="text-white">WA : 081525778174</p>
+   </div>
+  </footer>
+ </section>
+
+ <section>
+  <div id="myModal" class="modal">
+   <span class="close">&times;</span>
+   <img class="modal-content" id="img01">
+   <div id="caption"></div>
+  </div>
+ </section>
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js "
+ integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js "
+ integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js "
+ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+ <script>
+  var modal = document.getElementById("myModal");
+  var span = $(".close");
+
+  span.on("click", function () {
+   modal.style.display = "none";
+  });
+
+  document.addEventListener('keydown', function (e) {
+   let keyCode = e.keyCode;
+   if (keyCode === 27) {
+    modal.style.display = "none";
+   }
+  });
+
+  var imgnya = document.getElementById("imgmod");
+  var images = imgnya.getElementsByTagName("img");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  var i;
+  for (i = 0; i < images.length; i++) {
+   images[i].onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.nextElementSibling.innerHTML;
+   };
+  };
+
+  var countDownDate = new Date("Jan 5, 2222 00:00:00").getTime();
+
+  var jamNya = setInterval(function () {
+
+   var now = new Date().getTime();
+
+   var distance = countDownDate - now;
+
+   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+   document.getElementById("cd").innerHTML = hours + ":"
+    + minutes + ":" + seconds;
+
+   if (distance < 0) {
+    clearInterval(jamNya);
+    document.getElementById("cd").innerHTML = "EXPIRED";
+   }
+  }, 1000);
+
+  var items = document.querySelectorAll('#ii32mk');
+  for (var i = 0, len = items.length; i < len; i++) {
+   (function () {
+    var e = this,
+     t = ["0", "false", "none"],
+     n = ["1", "true"],
+     o = e.getAttribute("id"),
+     a = {
+      mousewheel: !0,
+      keyboard: !0,
+      effect: "slide",
+      loop: isNaN("true"),
+      breakpointsInverse: !0,
+      breakpoints: {
+       576: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        slidesPerGroup: 1,
+       },
+       768: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        slidesPerGroup: 1,
+       },
+       992: {
+        slidesPerView: parseInt(
+         "3",
+         10
+        ),
+        spaceBetween: parseInt(
+         "0",
+         10
+        ),
+        slidesPerGroup: parseInt(
+         "1",
+         10
+        ),
+       },
+      },
+     };
+    n.includes("true")
+     ? (a.navigation = {
+      nextEl: "#" + o + " .swiper-button-next",
+      prevEl: "#" + o + " .swiper-button-prev",
+     })
+     : (document
+      .querySelectorAll(
+       "#" + o + " > .swiper-button-next"
+      )
+      .forEach(function (e) {
+       return e.remove();
+      }),
+      document
+       .querySelectorAll(
+        "#" + o + " > .swiper-button-prev"
+       )
+       .forEach(function (e) {
+        return e.remove();
+       })),
+     t.includes("bullets") ||
+     (a.pagination = {
+      el: "#" + o + " .swiper-pagination",
+      type: "bullets",
+      clickable: !0,
+     }),
+     n.includes("true") &&
+     (a.autoplay = { delay: "3000" });
+    var r = function () {
+     window.sliderSwiper = new Swiper(e, a);
+    };
+    if ("undefined" == typeof Swiper) {
+     var i = document.createElement("link");
+     (i.rel = "stylesheet"),
+      (i.href = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"),
+      document.head.appendChild(i);
+     var s = document.createElement("script");
+     (s.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"),
+      (s.onload = r),
+      document.head.appendChild(s);
+    } else r();
+   }.bind(items[i]))();
+  }
+
+  var items = document.querySelectorAll('#ge2mk');
+  for (var i = 0, len = items.length; i < len; i++) {
+   (function () {
+    var e = this,
+     t = ["0", "false", "none"],
+     n = ["1", "true"],
+     o = e.getAttribute("id"),
+     a = {
+      mousewheel: !0,
+      keyboard: !0,
+      effect: "slide",
+      loop: isNaN("true"),
+      breakpointsInverse: !0,
+      breakpoints: {
+       576: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        slidesPerGroup: 1,
+       },
+       768: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        slidesPerGroup: 1,
+       },
+       992: {
+        slidesPerView: parseInt(
+         "3",
+         10
+        ),
+        spaceBetween: parseInt(
+         "0",
+         10
+        ),
+        slidesPerGroup: parseInt(
+         "1",
+         10
+        ),
+       },
+      },
+     };
+    n.includes("true")
+     ? (a.navigation = {
+      nextEl: "#" + o + " .swiper-button-next",
+      prevEl: "#" + o + " .swiper-button-prev",
+     })
+     : (document
+      .querySelectorAll(
+       "#" + o + " > .swiper-button-next"
+      )
+      .forEach(function (e) {
+       return e.remove();
+      }),
+      document
+       .querySelectorAll(
+        "#" + o + " > .swiper-button-prev"
+       )
+       .forEach(function (e) {
+        return e.remove();
+       })),
+     t.includes("bullets") ||
+     (a.pagination = {
+      el: "#" + o + " .swiper-pagination",
+      type: "bullets",
+      clickable: !0,
+     }),
+     n.includes("true") &&
+     (a.autoplay = { delay: "3000" });
+    var r = function () {
+     window.sliderSwiper = new Swiper(e, a);
+    };
+    if ("undefined" == typeof Swiper) {
+     var i = document.createElement("link");
+     (i.rel = "stylesheet"),
+      (i.href = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"),
+      document.head.appendChild(i);
+     var s = document.createElement("script");
+     (s.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"),
+      (s.onload = r),
+      document.head.appendChild(s);
+    } else r();
+   }.bind(items[i]))();
+  }
+ </script>
+</html>

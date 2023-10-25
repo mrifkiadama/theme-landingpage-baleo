@@ -1,0 +1,292 @@
+ /* SECTION CUSTOM */
+ /* SECTION Anak */
+ 
+ #section-anak-bg {
+     background-image: linear-gradient(rgba(104, 107, 108, 0.75), rgba(104, 107, 108, 0.75)), url('../images/background/bg-jam.jpg');
+     background-position: center;
+     background-size: auto auto;
+     padding: 80px 0;
+     background-size: cover;
+     background-attachment: relative;
+     position: relative;
+ }
+ /* SECTION Rokok */
+ 
+ #section-rokok-bg {
+     background-image: url('../images/background/bg-rokok.jpg');
+     background-position: center;
+     background-size: auto auto;
+     padding: 80px 0;
+     background-size: cover;
+     background-attachment: relative;
+     position: relative;
+ }
+ /* SECTION RAK */
+ /* SECTION Rak */
+ 
+ #section-rak-bg {
+     background-image: linear-gradient(rgba(85, 85, 108, 0.45), rgba(85, 85, 85, 0.45)), url('../images/background/bg-rak.jpg');
+     background-position: center;
+     background-size: auto auto;
+     padding: 80px 0;
+     background-size: cover;
+     background-attachment: relative;
+     position: relative;
+ }
+ /* SECTION Fashion */
+ 
+ #section-fashion-bg {
+     background-image: url('../images/background/bg-fashion.jpg');
+     background-position: center;
+     background-size: auto auto;
+     padding: 80px 0;
+     background-size: cover;
+     background-attachment: relative;
+     position: relative;
+ }
+ /* SECTION Perawatan Diri */
+ 
+ #section-perawatan-diri-bg {
+     background-image: linear-gradient(rgba(85, 85, 108, 0.45), rgba(85, 85, 85, 0.45)), url('../images/background/bg-perawatan-diri.jpg');
+     background-position: center;
+     background-size: auto auto;
+     padding: 80px 0;
+     background-size: cover;
+     background-attachment: relative;
+     position: relative;
+ }
+ /* SECTION Perawatan Diri 1*/
+ 
+ #section-perawatan-diri-1-bg {
+     background-image: linear-gradient(rgba(240, 244, 195, 0.85), rgba(240, 244, 195, 0.85));
+     background-position: center;
+     background-size: auto auto;
+     background-size: cover;
+     background-attachment: relative;
+     position: relative;
+ }
+ /* SECTION Kosmetik*/
+ 
+ #section-kosmetik-bg {
+     background-image: linear-gradient(rgba(240, 244, 195, 0.85), rgba(240, 244, 195, 0.85));
+     background-position: center;
+     background-size: auto auto;
+     background-size: cover;
+     background-attachment: relative;
+     position: relative;
+ }
+ /* SECTION Rokok */
+ 
+ #section-shoes-premium-bg {
+     background-image: url('../custom-template/shoes-premium/pict-bg.jpg');
+     background-position: center;
+     padding: 80px 0;
+     background-size: auto auto;
+     background-size: cover;
+     background-attachment: relative;
+     position: relative;
+ }
+ /* SECTION CELENGAN KA'BAH*/
+ 
+ .section-celengan-kabah {
+     background-color: transparent;
+     background-image: linear-gradient(320deg, #3DAB68 0%, #0F0240 100%);
+     opacity: 0.8;
+     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+ }
+ /* SECTION FASHION SEPATU 7 */
+ 
+ #section-sepatu-boots {
+     background-color: #FFFFFF;
+     background-image: url('../images/background/bg-image.jpeg');
+ }
+ 
+ #section-sepatu-boots-1 {
+     background-color: #FFFFFF;
+     background-image: url('../images/background/bg-black-wall.jpg');
+ }
+ 
+ .overlay-bg {
+     background-color: #001228;
+     opacity: 1;
+     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+     transition-property: background, border-radius, opacity;
+     transition-duration: 0.3s, 0.3s, 0.3s;
+     transition-timing-function: ease, ease, ease;
+     transition-delay: 0s, 0s, 0s;
+ }
+ 
+ .default-bg {
+     background-color: #000 !important;
+ }
+ 
+ .default-bg-1 {
+     background-color: #374350 !important;
+ }
+ 
+ .default-bg-2 {
+     background-color: #EEFF2C !important;
+ }
+ 
+ .default-bg-3 {
+     background-color: #ffb74d !important;
+ }
+ 
+ .default-bg-4 {
+     background-color: #062250 !important;
+ }
+ 
+ .default-bg-5 {
+     background-color: #40413d !important;
+ }
+ 
+ .default-bg-6 {
+     background-color: #583c21 !important;
+ }
+ 
+ .default-bg-7 {
+     background-color: #ffe4a4 !important;
+ }
+ 
+ .default-bg-white {
+     background-color: #e0e0e0 !important;
+ }
+ 
+ .default-bg-white-0 {
+     background-color: #fff !important;
+ }
+ 
+ .default-bg-white-1 {
+     background-color: #d1d9a8 !important;
+ }
+ 
+ .default-bg-white-2 {
+     background-color: #eeeeee !important;
+ }
+ 
+ .default-bg-white-3 {
+     background-color: #e2ffd2 !important;
+ }
+ 
+ .default-bg-white-4 {
+     background-color: #f1f5f6 !important;
+ }
+ 
+ .default-bg-white-5 {
+     background-color: #eef8d5 !important;
+ }
+ 
+ .default-bg-white-6 {
+     background-color: #e2f4de !important;
+ }
+ 
+ .default-bg-green {
+     background-color: #074a00 !important;
+ }
+ 
+ .default-bg-green-1 {
+     background-color: #78c305 !important;
+ }
+ 
+ .default-bg-green-2 {
+     background-color: #4DC700 !important;
+ }
+ 
+ .default-bg-green-3 {
+     background-color: #223123 !important;
+ }
+ 
+ .default-bg-blue {
+     background-color: #070d52 !important;
+ }
+ 
+ .default-bg-red {
+     background-color: #FF0000 !important;
+ }
+ 
+ .default-bg-gray {
+     background-color: #7a7a7a !important;
+ }
+ 
+ .default-bg-pink {
+     background-color: #ff8080 !important;
+ }
+ 
+ .default-bg-purple {
+     background-color: #c248ae !important;
+ }
+ /* TEXT */
+ 
+ .default-text {
+     color: #80caff !important;
+ }
+ 
+ .default-text-1 {
+     color: #ff8080 !important;
+ }
+ 
+ .default-text-2 {
+     color: #f40606 !important;
+ }
+ 
+ .default-text-3 {
+     color: #44c1df !important;
+ }
+ 
+ .default-text-4 {
+     color: #e8ff19 !important;
+ }
+ 
+ .default-text-5 {
+     color: #ffad00 !important;
+ }
+ 
+ .default-text-6 {
+     color: #FF7800 !important;
+ }
+ 
+ .fixed-checkout {
+     background-color: #E57C04;
+     background-repeat: no-repeat;
+     border-top: 0;
+     border-left: 0;
+     border-right: 0;
+     border-bottom: 0;
+     border-top-right-radius: 4px;
+     border-bottom-right-radius: 4px;
+     border-bottom-left-radius: 4px;
+     border-top-left-radius: 4px;
+     color: #ffffff;
+     width: 15%;
+     height: 40px;
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     margin: 10px auto;
+     z-index: 1000;
+ }
+ 
+ @media only screen and (max-width: 600px) {
+     .fixed-checkout {
+         background-color: #E57C04;
+         background-repeat: no-repeat;
+         border-top: 0;
+         border-left: 0;
+         border-right: 0;
+         border-bottom: 0;
+         border-top-right-radius: 4px;
+         border-bottom-right-radius: 4px;
+         border-bottom-left-radius: 4px;
+         border-top-left-radius: 4px;
+         color: #ffffff;
+         width: 50%;
+         height: 35px;
+         position: fixed;
+         left: 0;
+         bottom: 0;
+         right: 0;
+         margin: 10px auto;
+         z-index: 1000;
+     }
+ }
